@@ -1,7 +1,7 @@
 glFTPd PreBW by biohazard
 =========================
 
-Installation steps:
+# Installation steps:
 
 1. Edit GLFTPD_PATH at top of Makefile
 2. Edit settings in config.hpp
@@ -12,7 +12,7 @@ Installation steps:
 7. Edit ngBot.conf, ngBot.vars and your ngBot theme accordingly. See editing ngBot theme.
 7. Rehash eggdrop
 
-Editing ngBot theme:
+# Editing ngBot theme:
 
 1. Add PREBW to your existing 'set msgtypes(SECTION)' line in ngBot.conf.
    If it doesn't exist, copy it from ngBot.conf.defaults and edit it.
@@ -27,3 +27,10 @@ Editing ngBot theme:
    An example of 7 snapshots:
 
    announce.PREBW = "[%b{prebw}] %b{%reldir} - 1s %b{%u1}@%b{%b1}MB/s 5s %b{%u2}@%b{%b2}MB/s 10s %b{%u3}@%b{%b3}MB/s 15s %b{%u4}@%b{%b4}MB/s 20s %b{%u5}@%b{%b5}MB/s 25s %b{%u6}@%b{%b6}MB/s 30s %b{%u7}@%b{%b7}MB/s - %b{%traffic}MB by %b{%numusers}u/%b{%numgroups}g"
+
+# TROUBLESHOOTING
+Although this code is old and unmaintained, it's quite solid.
+The only issues I've encountered are:
+1) A non-standard IPC_KEY in glftpd.conf not matching our key in config.hpp
+2) **NOT** passing the **FULL PATH** to your release (eg: ./prebw /site/current/debian/11/11.iso vs ./prebw 11.iso)
+   It will only work if you pass the **FULL PATH**, so do **modify your pre script accordingly.**
