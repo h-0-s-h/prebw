@@ -29,8 +29,7 @@ glFTPd PreBW by biohazard
    announce.PREBW = "[%b{prebw}] %b{%reldir} - 1s %b{%u1}@%b{%b1}MB/s 5s %b{%u2}@%b{%b2}MB/s 10s %b{%u3}@%b{%b3}MB/s 15s %b{%u4}@%b{%b4}MB/s 20s %b{%u5}@%b{%b5}MB/s 25s %b{%u6}@%b{%b6}MB/s 30s %b{%u7}@%b{%b7}MB/s - %b{%traffic}MB by %b{%numusers}u/%b{%numgroups}g"
 
 # TROUBLESHOOTING
-Although this code is old and unmaintained, it's quite solid.
-The only issues I've encountered are:
-1) A non-standard IPC_KEY in glftpd.conf not matching our key in config.hpp
-2) **NOT** passing the **FULL PATH** to your release (eg: ./prebw /site/current/debian/11/11.iso vs ./prebw 11.iso)
+Although this code is old and unmaintained, it's quite solid and still works great
+The only "undocumented" issue I've encountered was:
+1) **NOT** passing the **FULL PATH** to your release (eg: ./prebw /site/current/debian/11/11.iso vs ./prebw 11.iso)
    It will only work if you pass the **FULL PATH**, so do **modify your pre script accordingly.**
