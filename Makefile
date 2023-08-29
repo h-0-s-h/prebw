@@ -1,4 +1,4 @@
-GLFTPD_PATH := /glftpd
+GLFTPD_PATH := /jail/glftpd
 
 CXXFLAGS := -O2 -Wall -Wextra -pedantic -I$(GLFTPD_PATH)/bin/sources
 
