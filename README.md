@@ -20,14 +20,14 @@ glFTPd PreBW by biohazard
 2. Add PREBW variables to ngBot.vars.
    The number of %u1 (num users) %b1 (bandwidth) pairs depends on how many
    snapshots set in config.hpp. An example of 7 snapshots:
-
+```
    set variables(PREBW) "%pf %u1 %b1 %u2 %b2 %u3 %b3 %u4 %b4 %u5 %b5 %u6 %b6 %u7 %b7 %numusers %numgroups %traffic"
-
+```
 3. Update your theme file, using the variables defined in ngBot.vars.
    An example of 7 snapshots:
-
+```
    announce.PREBW = "[%b{prebw}] %b{%reldir} - 1s %b{%u1}@%b{%b1}MB/s 5s %b{%u2}@%b{%b2}MB/s 10s %b{%u3}@%b{%b3}MB/s 15s %b{%u4}@%b{%b4}MB/s 20s %b{%u5}@%b{%b5}MB/s 25s %b{%u6}@%b{%b6}MB/s 30s %b{%u7}@%b{%b7}MB/s - %b{%traffic}MB by %b{%numusers}u/%b{%numgroups}g"
-
+```
 # TROUBLESHOOTING
 Although this code is old and unmaintained, it's quite solid and still works great
 The only "undocumented" issue I've encountered was:
